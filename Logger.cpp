@@ -42,7 +42,13 @@ void Logger::log(std::string msg)
         default:
             break;
 
-        std::cout << "now : " << msg << std::endl;
+        std::cout << Timestamp::now().toString() << " : " << msg << std::endl;
     }
 }
 
+/*int main()
+{
+
+    LOG_INFO("hello %d",10);
+    return 0;
+};*/
