@@ -12,7 +12,7 @@ Timestamp::Timestamp(int64_t microSecondsSinceEpoch) : microSecondsSinceEpoch_(m
 {
 }
 
-Timestamp::Timestamp now();
+Timestamp Timestamp::now()
 {
     return Timestamp(time(NULL));
 }

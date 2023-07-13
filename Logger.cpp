@@ -4,11 +4,11 @@
 
 #include "Logger.h"
 #include "Timestamp.h"
-#include "iostring"
+#include <iostream>
 
 Logger& Logger::instance()
 {
-    static instance = Logger();
+    static Logger instance;
     return instance;
 }
 void Logger::setLogLevel(int level)
@@ -31,7 +31,6 @@ void Logger::log(std::string msg)
         case  FATAL:
         {
             std::cout << "[FATAL]";
-            exit(0)
             break;
         }
         case  DEBUG:
@@ -45,10 +44,3 @@ void Logger::log(std::string msg)
         std::cout << Timestamp::now().toString() << " : " << msg << std::endl;
     }
 }
-
-/*int main()
-{
-
-    LOG_INFO("hello %d",10);
-    return 0;
-};*/
