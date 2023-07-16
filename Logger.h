@@ -25,7 +25,7 @@
         logger.log(buf); \
     } while(0) 
 
-#define FATAL_INFO(logmsg,...) \
+#define LOG_FATAL(logmsg,...) \
     do \
     { \
         Logger &logger = Logger::instance(); \
@@ -36,7 +36,7 @@
     }while(0)
 
 
-#define DEBUG_INFO(logmsg,...) \
+#define LOG_DEBUG(logmsg,...) \
     do \
     { \
         Logger &logger = Logger::instance(); \
